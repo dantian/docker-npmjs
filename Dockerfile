@@ -1,5 +1,5 @@
-# Version: 0.5.1 02-Dec-2013
-FROM sbisbee/couchdb:1.4
+# Version: 0.5.2 02-Jan-2014
+FROM sbisbee/couchdb:1.5
 MAINTAINER Terin Stock <terinjokes@gmail.com>
 
 ENV PATH /opt/node/bin/:$PATH
@@ -9,7 +9,7 @@ RUN apt-get install -y curl git
 
 # Setup nodejs
 RUN mkdir -p /opt/node
-RUN curl -L# http://nodejs.org/dist/v0.10.21/node-v0.10.21-linux-x64.tar.gz|tar -zx --strip 1 -C /opt/node
+RUN curl -L# http://nodejs.org/dist/v0.10.24/node-v0.10.24-linux-x64.tar.gz|tar -zx --strip 1 -C /opt/node
 
 # Download npmjs project
 RUN git clone https://github.com/isaacs/npmjs.org /opt/npmjs
